@@ -11,6 +11,8 @@ $(function() {
       $searchOpenButton = $(".search-button"),
       $searchCloseButton = $(".search-close-button"),
       $search = $(".search");
+      
+  var $searchInputField = $("#search-input");
 
   $(window).on("resize", function () {
     var e = $(this);
@@ -35,6 +37,9 @@ $(function() {
     closeSearch();
   });
 
+  $searchInputField.on("focus", function() {
+    openSearch();
+  });
 
   function openMenu() {
     $navMenu.addClass("active");
@@ -46,6 +51,7 @@ $(function() {
 
   function openSearch() {
     $search.addClass("active");
+    $("#js-search-input").focus();
   }
 
   function closeSearch() {

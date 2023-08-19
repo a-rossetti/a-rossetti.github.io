@@ -44,9 +44,10 @@
 .footer-bottom {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+
   .copyright {
-    margin-right: 60px;
     p {
       margin-bottom: 0;
       font-size: 13px;
@@ -61,6 +62,7 @@
   }
   .footer-social {
     ul {
+      text-align: center;
       li {
         display: inline-block;
         margin-left: 15px;
