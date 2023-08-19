@@ -37,7 +37,7 @@ google-analytics: # Add your identifier. For example UA-99631805-1.
 
 #-------------------------------
 # Newsletter
-mailchimp: # Add your MailChimp form identifier
+mailchimp: github.us14.list-manage.com/subscribe/post?u=b361008367347aeefa28dbec8&amp;id=bcf1a34f6b&amp;f_id=00edb0e0f0 # Add your MailChimp form identifier
 
 
 #-------------------------------
