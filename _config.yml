@@ -9,8 +9,10 @@ url: "https://a-rossetti.github.io" # the base hostname & protocol for your site
 
 #-------------------------------
 # About Section
-author-name:   Andrea Rossetti
-author-avatar: author-avatar.jpg
+authors:
+  andrea:
+    author-name:   Andrea Rossetti
+    author-avatar: andrea-author-avatar.jpg
 
 
 #-------------------------------

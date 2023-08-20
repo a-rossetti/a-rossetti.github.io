@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  How to Plan a Camping Trip
+author: andrea
 date:   2018-08-23 16:03:00 +0300
 image:  06.jpg
 tags:   Trip
