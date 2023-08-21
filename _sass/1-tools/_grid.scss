@@ -140,10 +140,5 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
       flex: 1; 
     }
   }
-
-  .nav-menu {
-    flex: 0;  // It won't take up any space anymore
-    display: none;
-  }
 }
 
