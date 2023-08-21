@@ -180,6 +180,12 @@
       color: #c1c1c7;
     }
   }
+
+  @media (max-width: 768px) {
+    .search-input {
+      display: none;
+    }
+  }
 }
 
 .search-results-list {
