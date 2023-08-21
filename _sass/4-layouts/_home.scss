@@ -27,6 +27,15 @@
       &:hover {
         color: #fff;
       }
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;  // If the title is too long, it'll be truncated and show "..."
+
+      @media (max-width: 320px) {
+        white-space: normal;   // Allow wrapping on smaller screens.
+        text-overflow: clip;  // Remove ellipsis on smaller screens.
+      }
     }
   }
 }
@@ -178,12 +187,6 @@
     background: #4f505d;
     &::placeholder {
       color: #c1c1c7;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .search-input {
-      display: none;
     }
   }
 }

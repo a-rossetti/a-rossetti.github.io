@@ -112,13 +112,38 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
 }
 
-@media(min-width: $desktop) {
-  .d-hide {
+@media (min-width: $desktop) {
+  .desktop-hide {
     display: none !important;
   }
 
-  .d-show {
+  .desktop-show {
     display: block !important;
+  }
+}
+
+@media (max-width: $tablet - 1px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+
+  .header-box {
+    .logo-title {
+      flex: 2; // Allocate more space to the logo/title
+    }
+
+    .nav-buttons {
+      flex: 1; 
+    }
+  }
+
+  .nav-menu {
+    flex: 0;  // It won't take up any space anymore
+    display: none;
   }
 }
 
