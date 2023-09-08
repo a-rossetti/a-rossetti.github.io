@@ -45,7 +45,7 @@ layout: default
 					<div class="post-share">
 						<ul class="share-list list-reset">
 							<li class="share-item">
-								<a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+								<a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}/it/{{ page.url }}"
 								onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
 								title="Share on Facebook" rel="nofollow">
 									<i class="ion ion-logo-facebook"></i>
@@ -53,7 +53,7 @@ layout: default
 							</li>
 					
 							<li class="share-item">
-								<a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+								<a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}/it/{{ page.url }}"
 								onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
 								title="Share on Twitter" rel="nofollow">
 									<i class="ion ion-logo-twitter"></i>
@@ -61,7 +61,7 @@ layout: default
 							</li>
 					
 							<li class="share-item">
-								<a class="share-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.description | uri_escape }}&source={{ site.title | uri_escape }}"
+								<a class="share-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}/it/{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.description | uri_escape }}&source={{ site.title | uri_escape }}"
 								onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
 								title="Share on LinkedIn" rel="nofollow">
 									<i class="ion ion-logo-linkedin"></i>
@@ -81,13 +81,13 @@ layout: default
 
 				<div class="post-navigation">
 					{% if page.previous.url %}
-					<a href="{{ site.baseurl }}{{page.previous.url}}" class="prev">
-						<div class="post-nav-arrow"><i class="ion ion-ios-arrow-round-back"></i> Previous Article</div>
+					<a href="{{ site.baseurl }}/it/{{page.previous.url}}" class="prev">
+						<div class="post-nav-arrow"><i class="ion ion-ios-arrow-round-back"></i> Articolo precedente</div>
 						<h2 class="post-nav-title">{{page.previous.title}}</h2>
 					</a>
 					{% endif %} {% if page.next.url %}
-					<a href="{{ site.baseurl }}{{page.next.url}}" class="next">
-						<div class="post-nav-arrow">Next Article <i class="ion ion-ios-arrow-round-forward"></i></div>
+					<a href="{{ site.baseurl }}/it/{{page.next.url}}" class="next">
+						<div class="post-nav-arrow">Articolo successivo <i class="ion ion-ios-arrow-round-forward"></i></div>
 						<h2 class="post-nav-title">{{page.next.title}}</h2>
 					</a>
 					{% endif %}
@@ -100,7 +100,7 @@ layout: default
 	</article> <!-- /.post -->
 
 	<div class="col col-12 col-t-4">
-		{% include sidebar.html %}
+		{% include sidebar_it.html %}
 	</div>
 
 	</div>

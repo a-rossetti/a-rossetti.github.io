@@ -60,6 +60,28 @@ $(document).ready(function() {
 
 
   /* =======================
+  // Change Language
+  ======================= */
+  var $langSelect = $("#language-select");
+
+  $langSelect.change(function() {
+    var selectedLang = $(this).val();
+    var currentPath = window.location.pathname;
+    
+    // Logic to navigate to the selected language's version of the current page.
+    if (selectedLang === 'en') {
+      // Navigate to the English version of the current page
+      window.location.href = window.location.href.replace("/it/", "/");
+    } else if (selectedLang === 'it') {
+      // Navigate to the Italian version of the current page
+      if (!currentPath.startsWith('/it/')) {
+        window.location.href = '/it' + currentPath;
+      }
+    }
+  });
+
+
+  /* =======================
   // Reveal Image
   ======================= */
   var ww = window.innerWidth,

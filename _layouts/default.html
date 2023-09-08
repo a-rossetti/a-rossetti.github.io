@@ -8,8 +8,15 @@
   {% if site.google-analytics %}
     {% include google-analytics.html %}
   {% endif %}
-  {% include loader.html %}
-  {% include header.html %}
+
+  <!--loader and header-->
+  {% if page.lang == 'en' %}
+    {% include loader.html %}
+    {% include header.html %}
+  {% elsif page.lang == 'it' %}
+    {% include loader_it.html %}
+    {% include header_it.html %}
+  {% endif %}
 
       {{ content }}
 

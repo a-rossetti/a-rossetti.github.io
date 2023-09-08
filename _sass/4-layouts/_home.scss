@@ -159,11 +159,34 @@
 
   i.ion {
     margin-left: 10px;
+    margin-right: 30px;
     font-size: 20px;
     color: $text;
     cursor: pointer;
     &:first-child {
       margin-left: 0;
+    }
+  }
+
+  .language-select {
+    height: 30px;
+    width: auto;
+    padding: 0 3px;
+    border: 1px solid $gray-blue;
+    font-size: 16px;
+    background-color: #fff;
+    color: $gray-blue;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    /* For options inside dropdown */
+    option {
+      color: $gray-blue; /* text color for options */
+      background: #fff; /* background for options */
     }
   }
 }

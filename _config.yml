@@ -47,20 +47,31 @@ mailchimp: github.us14.list-manage.com/subscribe/post?u=b361008367347aeefa28dbec
 markdown: kramdown
 permalink: ':title/'
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-feed
 
-paginate: 7
-paginate_path: "/page/:num"
+pagination:
+  enabled: true
 
-include:
-  - _pages
+collections:
+  en_posts:
+    output: true
+    permalink: /en/:path/
+  en_pages:
+    output: true
+    permalink: /en/:path/
+  it_posts:
+    output: true
+    permalink: /it/:path/
+  it_pages:
+    output: true
+    permalink: /en/:path/
+
 
 sass:
   sass_dir: _sass
   style: compressed
-
 
 #-------------------------------
 # Exclude from processing.
