@@ -11,8 +11,8 @@
             </li>
           {% else %}
             <li class="newer-posts">
-              <a class="newer-link" href="{{ paginator.previous_page_path }}/it/">
-                <i class="ion ion-ios-arrow-back"></i> Articoli precedenti
+              <a class="newer-link" href="{{ paginator.previous_page_path }}">
+                <i class="ion ion-ios-arrow-back"></i> Articoli più recenti
               </a>
             </li>
           {% endif %}
@@ -20,7 +20,7 @@
 
         {% if paginator.next_page %}
           <li class="older-posts">
-            <a class="older-link" href="{{ paginator.next_page_path }}/it/">
+            <a class="older-link" href="{{ paginator.next_page_path }}">
               Altri articoli <i class="ion ion-ios-arrow-forward"></i>
             </a>
           </li>
