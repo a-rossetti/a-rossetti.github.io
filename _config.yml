@@ -51,11 +51,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
+
 pagination:
   enabled: true
-  per_page: 7
-  sort_field: 'date'
-  sort_reverse: true
+
 
 collections:
   en_posts:

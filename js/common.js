@@ -67,18 +67,29 @@ $(document).ready(function() {
   $langSelect.change(function() {
     var selectedLang = $(this).val();
     var currentPath = window.location.pathname;
-    
+  
     // Logic to navigate to the selected language's version of the current page.
     if (selectedLang === 'en') {
       // Navigate to the English version of the current page
-      window.location.href = window.location.href.replace("/it/", "/");
+      if (currentPath.startsWith('/it/')) {
+        window.location.href = currentPath.replace("/it/", "/en/");
+      } else if (currentPath === '/en/' || currentPath === '/') {
+        window.location.href = '/en/';
+      } else {
+        window.location.href = '/en' + currentPath;
+      }
     } else if (selectedLang === 'it') {
       // Navigate to the Italian version of the current page
-      if (!currentPath.startsWith('/it/')) {
+      if (currentPath.startsWith('/en/')) {
+        window.location.href = currentPath.replace("/en/", "/it/");
+      } else if (currentPath === '/it/' || currentPath === '/') {
+        window.location.href = '/it/';
+      } else {
         window.location.href = '/it' + currentPath;
       }
     }
   });
+
 
 
   /* =======================

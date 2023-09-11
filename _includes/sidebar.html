@@ -81,7 +81,7 @@
     <ul class="tag-list list-reset">
     {% for item in (0..site.tags.size) %}{% unless forloop.last %}
       {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-        <li class="tag-item"><a href="{{ site.baseurl }}/tags#{{ this_word | cgi_escape }}" class="tag">{{ this_word }}</a></li>
+        <li class="tag-item"><a href="{{ site.baseurl }}/en/tags#{{ this_word | cgi_escape }}" class="tag">{{ this_word }}</a></li>
       {% endunless %}
     {% endfor %}
     </ul>
