@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_it
 title: Chi Siamo
 image: 08.jpg
 permalink: /it/chi-siamo/

@@ -159,7 +159,7 @@
 
   i.ion {
     margin-left: 10px;
-    margin-right: 30px;
+    margin-right: 10px;
     font-size: 20px;
     color: $text;
     cursor: pointer;
@@ -169,6 +169,7 @@
   }
 
   .language-select {
+    margin-left: 20px;
     height: 30px;
     width: auto;
     padding: 0 3px;
@@ -465,6 +466,12 @@
       margin-bottom: 30px;
       font-size: 24px;
     }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-buttons .language-select {
+    margin-left: 10px;
   }
 }
 
