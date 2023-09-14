@@ -5,25 +5,30 @@
   <div class="widget widget-recent">
     <h3 class="widget-title">Recent Posts</h3>
     {% assign sorted_posts = site.en_posts | sort: 'date' | reverse %}
-    {% for post in sorted_posts limit:4 %}
-    <div class="recent-posts">
-      {% if post.image %}
-      <div class="recent-header">
-        <a class="recent-image" href="{{ site.baseurl }}{{ post.url }}" style="background-image: url({{"/img/" | prepend: site.baseurl | append: post.image}})"></a>
-      </div>
-      {% else %}
-      {% endif %}
-      <div class="recent-content">
-        <h6 class="recent-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h6>
-        <div class="recent-date">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%B %-d, %Y"}}</time>
+    {% assign count = 0 %}
+    {% for post in sorted_posts %}
+      {% if post.id != page.id %}
+        {% if count < 4 %}
+        <div class="recent-posts">
+          {% if post.image %}
+          <div class="recent-header">
+            <a class="recent-image" href="{{ site.baseurl }}{{ post.url }}" style="background-image: url({{"/img/" | prepend: site.baseurl | append: post.image}})"></a>
+          </div>
+          {% endif %}
+          <div class="recent-content">
+            <h6 class="recent-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h6>
+            <div class="recent-date">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+        {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endif %}
     {% endfor %}
   </div>
-  {% else %}
   {% endif %}
+
 
   <div class="widget widget-social">
     <h3 class="widget-title">Contacts</h3>
