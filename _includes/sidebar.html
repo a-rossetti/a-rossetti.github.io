@@ -4,7 +4,8 @@
   {% if page.id %}
   <div class="widget widget-recent">
     <h3 class="widget-title">Recent Posts</h3>
-    {% for post in site.en_posts limit:4 %}
+    {% assign sorted_posts = site.en_posts | sort: 'date' | reverse %}
+    {% for post in sorted_posts limit:4 %}
     <div class="recent-posts">
       {% if post.image %}
       <div class="recent-header">
