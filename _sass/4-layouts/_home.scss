@@ -116,13 +116,13 @@
   height: 40px;
   font-size: 40px;
   border-radius: 50%;
-  border: 2px solid $gray-blue;
-  color: $gray-blue;
+  border: 2px solid $text;
+  color: $text;
   transition: all $global-transition;
   cursor: pointer;
   &:hover {
-    border-color: $text;
-    color: $text;
+    border-color: $white;
+    color: $white;
   }
 }
 
@@ -144,13 +144,14 @@
     width: auto;
     max-width: 250px;
     padding: 0 10px;
-    border: 1px solid $gray-blue;
+    border: 1px solid $blue-black;
     border-radius: 3px;
     font-size: 16px;
     margin-right: 10px;
     outline: none;
+    background-color: $blue-black;
     &::placeholder {
-      color: $gray-blue;
+      color: $text;
     }
     &:focus {
       border-color: $primary-color;
@@ -173,10 +174,10 @@
     height: 30px;
     width: auto;
     padding: 0 3px;
-    border: 1px solid $gray-blue;
+    border: 1px solid $blue-black;
     font-size: 16px;
-    background-color: #fff;
-    color: $gray-blue;
+    background-color: $blue-black;
+    color: $text;
     outline: none;
     cursor: pointer;
 
@@ -186,8 +187,8 @@
 
     /* For options inside dropdown */
     option {
-      color: $gray-blue; /* text color for options */
-      background: #fff; /* background for options */
+      color: $text; /* text color for options */
+      background: $blue-black; /* background for options */
     }
   }
 }
@@ -207,10 +208,11 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #c1c1c7;
-    background: #4f505d;
+    color: $text;
+    background: $blue-darken;
+    border-color: $blue-darken;
     &::placeholder {
-      color: #c1c1c7;
+      color: $text;
     }
   }
 }
@@ -221,17 +223,17 @@
     margin-bottom: 15px;
     list-style: decimal inside;
     text-align: left;
-    border-bottom: 2px solid $lighten-black;
+    border-bottom: 2px solid $border-color;
     white-space: nowrap;
     .search-link {
       display: inline-block;
       width: 100%;
       padding: 15px;
       font-size: 21px;
-      color: $white;
+      color: $text;
       white-space: normal;
       &:hover {
-        color: $gray-blue;
+        color: $white;
       }
     }
   }
@@ -255,7 +257,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: $black;
-    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, .25);
+    box-shadow: 0 9px 18px 0 rgba(3, 8, 17, .25);
     &:before {
       content: "";
       display: table;
