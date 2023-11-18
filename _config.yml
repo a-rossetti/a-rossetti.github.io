@@ -24,7 +24,7 @@ email:     thethirdrealm1@gmail.com # Email
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: thethirdrealm # Add your shortname for Disqus Comment. For example mr-brown
+disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 
 
 #-------------------------------
