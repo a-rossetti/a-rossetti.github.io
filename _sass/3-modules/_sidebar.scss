@@ -118,12 +118,20 @@
     border: 1px solid $border-color;
     border-radius: $global-radius;
     color: $border-color;
+    vertical-align: middle; // Helps align the icon vertically with text
     &:hover {
       border-color: $primary-color;
       color: $primary-color;
     }
     i {
       font-size: 18px;
+      vertical-align: middle;
+    }
+
+    svg {
+        width: 14.5px; // Match other icons
+        height: 14.5px; // Match other icons
+        transform: translateY(1px); // Adjust this value as needed to align
     }
   }
 }
