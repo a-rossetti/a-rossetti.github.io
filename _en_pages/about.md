@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-image: author-avatars/starship-mars.jpg
+image: author-avatars/mars-sunset.jpg
 permalink: /en/about/
 lang: en
 ---
@@ -14,6 +14,6 @@ My goal is to understand as much as possible about the world and the universe, a
 Some of my interests are physics, computer science, math, AI, evolution, consciousness, philosophy, history, geopolitics, wars and human rights.
 
 Feel free to reach out:
+
 - X: [@a_rossetti_](https://x.com/a_rossetti_)
 - Discord: @andrea3609
-

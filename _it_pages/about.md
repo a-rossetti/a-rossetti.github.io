@@ -1,7 +1,7 @@
 ---
 layout: page_it
 title: Chi Sono
-image: author-avatars/starship-mars.jpg
+image: author-avatars/mars-sunset.jpg
 permalink: /it/chi-siamo/
 lang: it
 ---
@@ -14,6 +14,6 @@ Il mio obiettivo è quello di comprendere il più possible riguardo al mondo e s
 Alcuni dei miei interessi sono la fisica, l'informatica, la matematica, l'IA, l'evoluzione, la coscienza, la filosofia, la storia, la geopolitica, le guerre e i diritti umani.
 
 Sentiti libero/a di contattarmi:
+
 - X: [@a_rossetti_](https://x.com/a_rossetti_)
 - Discord: @andrea3609
-
