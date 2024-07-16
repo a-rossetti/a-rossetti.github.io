@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-image: author-avatars/mars-sunset.jpg
+image: author-avatars/mars-sunset.jpeg
 permalink: /en/about/
 lang: en
 ---

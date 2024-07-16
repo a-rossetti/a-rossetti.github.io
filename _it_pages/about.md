@@ -1,8 +1,8 @@
 ---
 layout: page_it
 title: Chi Sono
-image: author-avatars/mars-sunset.jpg
-permalink: /it/chi-siamo/
+image: author-avatars/mars-sunset.jpeg
+permalink: /it/about/
 lang: it
 ---
 
