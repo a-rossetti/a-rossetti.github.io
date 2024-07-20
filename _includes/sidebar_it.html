@@ -48,10 +48,10 @@
       </li>
       {% else %} {% endif %}
 
-      {% if site.email %}
+      <!--{% if site.email %}
       <li class="social-profiles-item">
         <a href="mailto:{{ site.email }}" class="social-profiles-link"><i class="ion ion-md-mail"></i></a>
-      </li>
+      </li>-->
       {% else %} {% endif %}
     </ul>
   </div>
@@ -79,6 +79,15 @@
     <div class="instagram-box">
       <ul id="instafeed" class="instagram-grid list-reset clearfix"></ul>
       <a class="instagram-prof" href="#">&#64;UserName</a>
+    </div>
+  </div>
+  {% endif %}
+  {% if site.xfeed == true %}
+  <div class="widget widget-x">
+    <h3 class="widget-title">X Feed</h3>
+    <div class="x-box">
+      <ul id="xfeed" class="x-grid list-reset clearfix"></ul>
+      <a class="x-prof" href="#">&#64;{{ site.x_username }}</a>
     </div>
   </div>
   {% endif %}

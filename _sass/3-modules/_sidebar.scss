@@ -137,13 +137,13 @@
 }
 
 // Instagram Widget
-.widget-instagram {
-  .instagram-box {
+.widget-instagram .widget-x {
+  .instagram-box .x-box {
     text-align: center;
-    .instagram-grid {
+    .instagram-grid .x-grid {
       margin-bottom: 30px;
     }
-    .instagram-item {
+    .instagram-item .x-item {
       width: 33.333%;
       padding: 3px;
       float: left;
@@ -168,7 +168,7 @@
         }
       }
     }
-    .instagram-prof {
+    .instagram-prof .x-prof {
       font-size: 14px;
       color: #3E4250;
       &:hover {
