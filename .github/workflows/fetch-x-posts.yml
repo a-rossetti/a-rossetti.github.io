@@ -11,7 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: sudo apt-get install jq
 
       - name: Fetch user ID
         env:
@@ -29,9 +32,11 @@ jobs:
           curl -X GET "https://api.twitter.com/2/users/$USER_ID/tweets" -H "Authorization: Bearer $BEARER_TOKEN" -o _data/x-posts.json
 
       - name: Commit posts
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add _data/x-posts.json
           git commit -m "Fetch latest posts from X"
-          git push
+         
