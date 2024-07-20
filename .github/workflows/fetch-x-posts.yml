@@ -16,8 +16,9 @@ jobs:
       - name: Fetch user ID
         env:
           BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
+          X_USERNAME: ${{ secrets.X_USERNAME }}
         run: |
-          curl -X GET "https://api.twitter.com/2/users/by/username/${{ secrets.X_USERNAME }}" -H "Authorization: Bearer $BEARER_TOKEN" -o user.json
+          curl -X GET "https://api.twitter.com/2/users/by/username/$X_USERNAME" -H "Authorization: Bearer $BEARER_TOKEN" -o user.json
           USER_ID=$(jq -r '.data.id' user.json)
           echo "USER_ID=$USER_ID" >> $GITHUB_ENV
 
@@ -25,13 +26,12 @@ jobs:
         env:
           BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
         run: |
-          curl -X GET "https://api.twitter.com/2/users/$USER_ID/tweets" -H "Authorization: Bearer $BEARER_TOKEN" -o _data/tweets.json
+          curl -X GET "https://api.twitter.com/2/users/$USER_ID/tweets" -H "Authorization: Bearer $BEARER_TOKEN" -o _data/x-posts.json
 
-      - name: Commit tweets
+      - name: Commit posts
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add _data/tweets.json
+          git add _data/x-posts.json
           git commit -m "Fetch latest posts from X"
           git push
-

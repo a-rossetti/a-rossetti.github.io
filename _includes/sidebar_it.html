@@ -86,12 +86,18 @@
   <div class="widget widget-x">
     <h3 class="widget-title">X Feed</h3>
     <div class="x-box">
-      <ul id="xfeed" class="x-grid list-reset clearfix"></ul>
-      <a class="x-prof" href="#">&#64;{{ site.x-username }}</a>
+      <ul id="xfeed" class="x-grid list-reset clearfix">
+        {% for post in site.data.x-posts.data %}
+          <li class="x-post">
+            <p>{{ post.text }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+      <a class="x-prof" href="https://x.com/{{ site.x_username }}">&#64;{{ site.x_username }}</a>
     </div>
   </div>
   {% endif %}
-
+  
   <div class="widget widget-tags">
     <h3 class="widget-title">Tag Cloud</h3>
   
