@@ -86,9 +86,10 @@
   <div class="widget widget-x">
     <h3 class="widget-title">X Feed</h3>
     <div class="x-box">
-      <a class="twitter-timeline" href="https://twitter.com/{{ site.x-username }}?ref_src=twsrc%5Etfw">Tweets by {{ site.x-username }}</a>
+      <a class="twitter-timeline" data-chrome="noheader nofooter noborders" data-tweet-limit="5" href="https://twitter.com/{{ site.x-username }}?ref_src=twsrc%5Etfw">Tweets by {{ site.x-username }}</a>
     </div>
   </div>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   {% endif %}
 
   <div class="widget widget-tags">
