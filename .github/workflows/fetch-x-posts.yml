@@ -5,9 +5,6 @@ on:
     - cron: '0 * * * *' # Runs every hour
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -24,50 +21,22 @@ jobs:
           BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
           X_USERNAME: ${{ secrets.X_USERNAME }}
         run: |
-          echo "Fetching user ID for $X_USERNAME"
-          RESPONSE=$(curl -s -w "\n%{http_code}" -X GET "https://api.twitter.com/2/users/by/username/$X_USERNAME" -H "Authorization: Bearer $BEARER_TOKEN")
-          HTTP_STATUS=$(echo "$RESPONSE" | tail -n 1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          
-          echo "HTTP Status: $HTTP_STATUS"
-          echo "Response body:"
-          echo "$BODY"
-          
-          if [ $HTTP_STATUS -eq 200 ]; then
-            USER_ID=$(echo "$BODY" | jq -r '.data.id')
-            echo "USER_ID=$USER_ID" >> $GITHUB_ENV
-            echo "Successfully fetched user ID: $USER_ID"
-          else
-            echo "Error fetching user ID. HTTP Status: $HTTP_STATUS"
-            exit 1
-          fi
+          curl -X GET "https://api.twitter.com/2/users/by/username/$X_USERNAME" -H "Authorization: Bearer $BEARER_TOKEN" -o user.json
+          USER_ID=$(jq -r '.data.id' user.json)
+          echo "USER_ID=$USER_ID" >> $GITHUB_ENV
 
       - name: Fetch posts
         env:
           BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
         run: |
-          echo "Fetching posts for user ID: $USER_ID"
-          RESPONSE=$(curl -s -w "\n%{http_code}" -X GET "https://api.twitter.com/2/users/$USER_ID/tweets" -H "Authorization: Bearer $BEARER_TOKEN")
-          HTTP_STATUS=$(echo "$RESPONSE" | tail -n 1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          
-          echo "HTTP Status: $HTTP_STATUS"
-          echo "Response body:"
-          echo "$BODY"
-          
-          if [ $HTTP_STATUS -eq 200 ]; then
-            echo "$BODY" > _data/x-posts.json
-            echo "Successfully fetched posts"
-          else
-            echo "Error fetching posts. HTTP Status: $HTTP_STATUS"
-            exit 1
-          fi
+          curl -X GET "https://api.twitter.com/2/users/$USER_ID/tweets" -H "Authorization: Bearer $BEARER_TOKEN" -o _data/x-posts.json
 
       - name: Commit posts
+        env:
+          PAT: ${{ secrets.PAT }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add _data/x-posts.json
-          git status
-          git commit -m "Fetch latest posts from X" || echo "No changes to commit"
-          git push
+          git commit -m "Fetch latest posts from X"
+          git push https://${{ secrets.PAT }}@github.com/a-rossetti/a-rossetti.github.io.git HEAD:master
