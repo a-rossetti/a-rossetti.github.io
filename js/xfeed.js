@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const username = '{{ site.x_username }}';
-    const bearerToken = 'YOUR_BEARER_TOKEN';
+    const bearerToken = '${{ secrets.BEARER_TOKEN }}';
 
     // Step 1: Get User ID
     fetch(`https://api.twitter.com/2/users/by/username/${username}`, {
