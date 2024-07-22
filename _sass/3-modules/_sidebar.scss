@@ -137,20 +137,24 @@
 }
 
 // Instagram and X Widget
-.widget-instagram .widget-x {
-  .instagram-box .x-box {
+.widget-instagram, .widget-x {
+  .instagram-box, .x-box {
     text-align: center;
-    .instagram-grid .x-grid {
+
+    .instagram-grid, .x-grid {
       margin-bottom: 30px;
     }
-    .instagram-item .x-item {
+
+    .instagram-item, .x-item {
       width: 33.333%;
       padding: 3px;
       float: left;
       overflow: hidden;
+      
       a {
         position: relative;
         display: block;
+
         &:after {
           content: "";
           position: absolute;
@@ -161,6 +165,7 @@
           background: rgba($blue-darken, .3);
           transition: $global-transition;
         }
+
         &:hover {
           &:after {
             background: transparent;
@@ -168,9 +173,11 @@
         }
       }
     }
-    .instagram-prof .x-prof {
+
+    .instagram-prof, .x-prof {
       font-size: 14px;
       color: #3E4250;
+
       &:hover {
         text-decoration: underline;
       }
