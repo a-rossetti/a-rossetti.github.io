@@ -87,14 +87,7 @@
   <div class="widget widget-x">
     <h3 class="widget-title">X Feed</h3>
     <div class="x-box">
-      <ul id="xfeed" class="x-grid list-reset clearfix">
-        {% for post in site.data.x-posts.data %}
-          <li class="x-post">
-            <p>{{ post.text }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-      <a class="x-prof" href="https://x.com/{{ site.x-username }}">&#64;{{ site.x-username }}</a>
+      <a class="twitter-timeline" href="https://twitter.com/{{ site.x-username }}?ref_src=twsrc%5Etfw">Tweets by {{ site.x-username }}</a>
     </div>
   </div>
   {% endif %}
