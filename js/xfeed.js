@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const username = '{{ site.x_username }}';
+    const username = '{{ secrets.X_USERNAME }}';
     const bearerToken = '${{ secrets.BEARER_TOKEN }}';
 
     // Step 1: Get User ID
