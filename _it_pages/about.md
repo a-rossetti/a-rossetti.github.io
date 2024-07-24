@@ -16,4 +16,4 @@ Alcuni dei miei interessi sono la fisica, l'informatica, la matematica, l'IA, l'
 Sentiti libero/a di contattarmi:
 
 - X: [@a_rossetti_](https://x.com/a_rossetti_)
-- Discord: @andrea3609
+- Telegram: [@andrea3609](https://t.me/andrea3609)

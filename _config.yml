@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 
-title: The Third Realm
+title: Andrea Rossetti
 description:  # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thethirdrealm.org/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -17,10 +17,10 @@ authors:
 
 #-------------------------------
 # Contact links
-x:          https://www.x.com/the_third_realm # X
-instagram:  https://www.instagram.com/the.third.realm/ # Instagram
-email:      thethirdrealm1@gmail.com # Email
-
+x:          https://www.x.com/a_rossetti_ # X
+telegram:   https://t.me/andrea3609
+instagram:
+email:
 
 #-------------------------------
 # Comment Section (Disqus)
@@ -45,7 +45,7 @@ google-analytics: # Add your identifier. For example UA-99631805-1.
 
 #-------------------------------
 # Newsletter
-mailchimp: github.us14.list-manage.com/subscribe/post?u=b361008367347aeefa28dbec8&amp;id=bcf1a34f6b&amp;f_id=00edb0e0f0 # Add your MailChimp form identifier
+mailchimp: # Add your MailChimp form identifier
 
 
 #-------------------------------

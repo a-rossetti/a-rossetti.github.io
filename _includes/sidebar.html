@@ -42,6 +42,15 @@
         </a>
       </li>
       {% else %} {% endif %}
+      {% if site.telegram %}
+      <li class="social-profiles-item">
+        <a href="{{ site.telegram }}" class="social-profiles-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M9.998,15.192l-0.437,4.906c0.623,0,0.891-0.267,1.215-0.588l2.913-2.792l6.049,4.415c1.109,0.616,1.885,0.292,2.153-1.031L24,2.856c0.328-1.365-0.521-1.988-1.604-1.616L1.524,8.267c-1.364,0.536-1.348,1.302-0.238,1.652l4.843,1.51L19.428,4.67c0.568-0.368,1.087-0.164,0.66,0.234L9.998,15.192z" fill="currentColor"/>
+          </svg>
+        </a>
+      </li>
+      {% else %} {% endif %}
 
       {% if site.instagram %}
       <li class="social-profiles-item">
@@ -49,10 +58,10 @@
       </li>
       {% else %} {% endif %}
 
-      <!--{% if site.email %}
+      {% if site.email %}
       <li class="social-profiles-item">
         <a href="mailto:{{ site.email }}" class="social-profiles-link"><i class="ion ion-md-mail"></i></a>
-      </li>-->
+      </li>
       {% else %} {% endif %}
     </ul>
   </div>
@@ -74,24 +83,7 @@
     </form>
   </div>
 -->
-  {% if site.instafeed == true %}
-  <div class="widget widget-instagram">
-    <h3 class="widget-title">Instagram</h3>
-    <div class="instagram-box">
-      <ul id="instafeed" class="instagram-grid list-reset clearfix"></ul>
-      <a class="instagram-prof" href="#">&#64;UserName</a>
-    </div>
-  </div>
-  {% endif %}
-  {% if site.xfeed == true %}
-  <div class="widget widget-x">
-    <h3 class="widget-title">X Feed</h3>
-    <div class="x-box">
-      <a class="twitter-timeline" data-chrome="noheader nofooter noborders transparent" data-theme="dark" data-tweet-limit="5" href="https://twitter.com/a_rossetti_?ref_src=twsrc%5Etfw">Tweets by @a_rossetti_</a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-  </div>
-  {% endif %}
+
 
   <div class="widget widget-tags">
     <h3 class="widget-title">Tag Cloud</h3>
@@ -112,5 +104,25 @@
       {% endfor %}
     </ul>
   </div>
+
+
+  {% if site.instafeed == true %}
+  <div class="widget widget-instagram">
+    <h3 class="widget-title">Instagram</h3>
+    <div class="instagram-box">
+      <ul id="instafeed" class="instagram-grid list-reset clearfix"></ul>
+      <a class="instagram-prof" href="#">&#64;UserName</a>
+    </div>
+  </div>
+  {% endif %}
+  {% if site.xfeed == true %}
+  <div class="widget widget-x">
+    <h3 class="widget-title">X Feed</h3>
+    <div class="x-box">
+      <a class="twitter-timeline" data-chrome="noheader nofooter noborders transparent" data-theme="dark" data-tweet-limit="5" href="https://twitter.com/a_rossetti_?ref_src=twsrc%5Etfw">Tweets by @a_rossetti_</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+  {% endif %}
 
 </aside> <!-- /.sidebar -->

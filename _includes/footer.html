@@ -4,7 +4,7 @@
       <div class="col col-12">
         <div class="footer-top">
           <h2 class="logo-title">
-            <a href="{{site.baseurl}}/" class="logo-text">The Third Realm</a>
+            <a href="{{site.baseurl}}/en/" class="logo-text">Andrea Rossetti</a>
           </h2>
           <div class="top"><i class="ion ion-ios-arrow-up"></i></div>
         </div>
@@ -18,13 +18,17 @@
               <li><a href="{{ site.x }}">X</a></li>
               {% else %} {% endif %}
 
+              {% if site.telegram %}
+              <li><a href="{{ site.telegram }}">Telegram</a></li>
+              {% else %} {% endif %}
+
               {% if site.instagram %}
               <li><a href="{{ site.instagram}}">Instagram</a></li>
               {% else %} {% endif %}
 
-              <!--{% if site.email %}
+              {% if site.email %}
               <li><a href="mailto:{{ site.email }}">Email</a></li>
-              {% else %} {% endif %}-->
+              {% else %} {% endif %}
             </ul>
           </div>
         </div>
