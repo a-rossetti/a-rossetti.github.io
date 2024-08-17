@@ -24,8 +24,8 @@ email:
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
-
+# Add your shortname for Disqus Comment
+disqus-identifier: andrea27172
 
 #-------------------------------
 # Instagram Feed
