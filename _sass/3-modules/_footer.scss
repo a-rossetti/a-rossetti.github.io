@@ -14,10 +14,10 @@
   border-bottom: 1px solid $border-color;
   .logo-text {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 550;
     line-height: 16px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     color: $text;
     &:hover {
       color: $gray-blue;
