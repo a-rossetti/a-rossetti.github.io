@@ -1,10 +1,10 @@
-<!-- Italian Sidebar -->
+<!-- Dutch Sidebar -->
 <aside class="sidebar">
   
   {% if page.id %}
   <div class="widget widget-recent">
-    <h3 class="widget-title">Articoli recenti</h3>
-    {% assign sorted_posts = site.it_posts | sort: 'date' | reverse %}
+    <h3 class="widget-title">Recente artikelen</h3>
+    {% assign sorted_posts = site.nl_posts | sort: 'date' | reverse %}
     {% assign count = 0 %}
     {% for post in sorted_posts %}
       {% if post.id != page.id %}
@@ -31,7 +31,7 @@
 
 
   <div class="widget widget-social">
-    <h3 class="widget-title">Contatti</h3>
+    <h3 class="widget-title">Contacten</h3>
     <ul class="social-profiles list-reset">
       {% if site.x %}
       <li class="social-profiles-item">
@@ -68,17 +68,17 @@
 <!--
   <div class="widget widget-newsletter">
     <h3 class="widget-title">Newsletter</h3>
-    <div class="newsletter-subtitle">Ricevi news</div>
-    <div class="newsletter-text">Ricevi le ultime news via email</div>
+    <div class="newsletter-subtitle">Get Interesting News</div>
+    <div class="newsletter-text">Receive the latest news via email.</div>
     <form class="c-newsletter-form validate" action="{% if site.mailchimp %}//{{site.mailchimp}}{% else %}#{% endif %}" method="POST"
       id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
       <div class="newsletter-group">
         <div class="newsletter-group-top">
-          <label class="screen-reader-text" for="mce-EMAIL">Indirizzo e-mail</label>
+          <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
           <i class="email-icon ion ion-ios-mail"></i>
           <input class="newsletter-email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="E-mail">
         </div>
-        <input class="newsletter-button" id="mc-embedded-subscribe" type="submit" name="subscribe" value="Iscriviti">
+        <input class="newsletter-button" id="mc-embedded-subscribe" type="submit" name="subscribe" value="Subscribe">
       </div>
     </form>
   </div>
@@ -88,19 +88,19 @@
   <div class="widget widget-tags">
     <h3 class="widget-title">Tag Cloud</h3>
   
-    {% assign it_tags = "" %}
+    {% assign nl_tags = "" %}
   
-    {% for post in site.it_posts %}
+    {% for post in site.nl_posts %}
       {% for tag in post.tags %}
-        {% assign it_tags = it_tags | append: tag | append: "," %}
+        {% assign nl_tags = nl_tags | append: tag | append: "," %}
       {% endfor %}
     {% endfor %}
   
-    {% assign it_tag_words = it_tags | split:',' | uniq | sort %}
+    {% assign nl_tag_words = nl_tags | split:',' | uniq | sort %}
   
     <ul class="tag-list list-reset">
-      {% for tag in it_tag_words %}
-        <li class="tag-item"><a href="{{ site.baseurl }}/it/tags#{{ tag | cgi_escape }}" class="tag">{{ tag }}</a></li>
+      {% for tag in nl_tag_words %}
+        <li class="tag-item"><a href="{{ site.baseurl }}/nl/tags#{{ tag | cgi_escape }}" class="tag">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   </div>
@@ -117,12 +117,11 @@
   {% endif %}
   {% if site.xfeed == true %}
   <div class="widget widget-x">
-    <h3 class="widget-title">Feed X</h3>
+    <h3 class="widget-title">X-feed</h3>
     <div class="x-box">
-      <a class="twitter-timeline" data-chrome="noheader nofooter noborders transparent" data-theme="dark" href="https://twitter.com/NXT4EU?ref_src=twsrc%5Etfw">Post di NXT4EU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" data-chrome="noheader nofooter noborders transparent" data-theme="dark" href="https://twitter.com/NXT4EU?ref_src=twsrc%5Etfw">Berichten Door NXT4EU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
   {% endif %}
-
-    
+  
 </aside> <!-- /.sidebar -->

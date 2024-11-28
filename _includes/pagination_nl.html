@@ -5,14 +5,14 @@
         {% if paginator.previous_page %}
           {% if paginator.previous_page == 1 %}
             <li class="previous-posts">
-              <a class="previous-link" href="{{ site.baseurl }}/en/">
-                <i class="ion ion-ios-arrow-back"></i> Previous articles
+              <a class="previous-link" href="{{ site.baseurl }}/nl/">
+                <i class="ion ion-ios-arrow-back"></i> Vorige artikelen
               </a>
             </li>
           {% else %}
             <li class="newer-posts">
               <a class="newer-link" href="{{ paginator.previous_page_path }}">
-                <i class="ion ion-ios-arrow-back"></i> More recent articles
+                <i class="ion ion-ios-arrow-back"></i> Recentere artikelen
               </a>
             </li>
           {% endif %}
@@ -21,7 +21,7 @@
         {% if paginator.next_page %}
           <li class="older-posts">
             <a class="older-link" href="{{ paginator.next_page_path }}">
-              Older articles <i class="ion ion-ios-arrow-forward"></i>
+              Oudere artikelen <i class="ion ion-ios-arrow-forward"></i>
             </a>
           </li>
         {% endif %}

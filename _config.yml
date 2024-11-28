@@ -75,6 +75,12 @@ collections:
   it_pages:
     output: true
     permalink: /it/:path/
+  nl_posts:
+    output: true
+    permalink: /nl/:path/
+  nl_pages:
+    output: true
+    permalink: /nl/:path/
 
 
 sass:

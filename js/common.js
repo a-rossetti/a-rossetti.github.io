@@ -67,30 +67,25 @@ $(document).ready(function() {
   $langSelect.change(function() {
     var selectedLang = $(this).val();
     var currentPath = window.location.pathname;
-  
-    // Logic to navigate to the selected language's version of the current page.
-    if (selectedLang === 'en') {
-      // Navigate to the English version of the current page
-      if (currentPath.startsWith('/it/')) {
-        window.location.href = currentPath.replace("/it/", "/en/");
-      } else if (currentPath === '/en/' || currentPath === '/') {
-        window.location.href = '/en/';
-      } else {
-        window.location.href = '/en' + currentPath;
+    var supportedLangs = ['en', 'it', 'nl']; // Add or remove languages as needed
+
+    // Ensure the selected language is supported
+    if (supportedLangs.includes(selectedLang)) {
+      // Determine the current language prefix
+      var currentLangPrefix = supportedLangs.find(lang => currentPath.startsWith('/' + lang)) || '';
+      
+      // Replace or add the language prefix
+      var newPath = currentPath.replace('/' + currentLangPrefix, '/' + selectedLang);
+      
+      // If the path does not match any language prefix, prepend the new language prefix
+      if (currentLangPrefix === '') {
+        newPath = '/' + selectedLang + currentPath;
       }
-    } else if (selectedLang === 'it') {
-      // Navigate to the Italian version of the current page
-      if (currentPath.startsWith('/en/')) {
-        window.location.href = currentPath.replace("/en/", "/it/");
-      } else if (currentPath === '/it/' || currentPath === '/') {
-        window.location.href = '/it/';
-      } else {
-        window.location.href = '/it' + currentPath;
-      }
+
+      // Navigate to the new path
+      window.location.href = newPath;
     }
   });
-
-
 
   /* =======================
   // Reveal Image

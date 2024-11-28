@@ -1,9 +1,9 @@
 ---
-layout: page
-title: About
+layout: page_nl
+title: Over
 image: author-avatars/mars-sunset.jpeg
-permalink: /en/about/
-lang: en
+permalink: /nl/about/
+lang: nl
 ---
 
 NXT4EU

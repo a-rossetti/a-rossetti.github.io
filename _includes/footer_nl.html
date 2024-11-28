@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="footer-top">
+          <h2 class="logo-title">
+            <a href="{{site.baseurl}}/nl/" class="logo-text">Andrea Rossetti</a>
+          </h2>
+          <div class="top"><i class="ion ion-ios-arrow-up"></i></div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; {{site.time | date: '%Y'}} | Andrea Rossetti. Website thema door <a href="https://github.com/artemsheludko">Artem Sheludko</a></p>
+          </div>
+          <div class="footer-social">
+            <ul class="list-reset">
+              {% if site.x %}
+              <li><a href="{{ site.x }}">X</a></li>
+              {% else %} {% endif %}
+
+              {% if site.telegram %}
+              <li><a href="{{ site.telegram }}">Telegram</a></li>
+              {% else %} {% endif %}
+
+              {% if site.instagram %}
+              <li><a href="{{ site.instagram}}">Instagram</a></li>
+              {% else %} {% endif %}
+
+              {% if site.email %}
+              <li><a href="mailto:{{ site.email }}">Email</a></li>
+              {% else %} {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> <!-- /.footer -->

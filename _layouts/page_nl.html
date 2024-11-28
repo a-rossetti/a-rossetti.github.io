@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+{% include head.html %}
+
+<body>
+
+    {% if site.google-analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
+
+    <!--loader and header-->
+    {% include loader_nl.html %}
+    {% include header_nl.html %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12">
+                <div class="page-image-box">
+                    <div class="page-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+                </div>
+            </div>
+            <article class="col col-12 col-t-10 push-t-1 page">
+                <div class="page-content">
+                    <div class="page-head">
+                        <h1 class="page-title">{{ page.title | escape }}</h1>
+                    </div>
+
+                    <div class="page-body">
+                        {{ content }}
+                    </div>
+                </div>
+            </article> <!-- /.page -->
+        </div>
+    </div>
+
+    {% include footer_nl.html %}
+    {% include javascripts_nl.html %}
+
+</body>
+
+</html>
