@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 
-title: Andrea Rossetti
+title: NXT4EU
 description:  # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://a-rossetti.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -17,8 +17,8 @@ authors:
 
 #-------------------------------
 # Contact links
-x:          https://www.x.com/a_rossetti_ # X
-telegram:   https://t.me/andrea3609
+x:          https://www.x.com/NXT4EU # X
+telegram:   
 instagram:
 email:
 
@@ -35,7 +35,7 @@ instafeed: false # To enable the instafeed, use the value true. To turn off use 
 #-------------------------------
 # X feed
 xfeed: true
-x-username: "a_rossetti_"
+x-username: "NXT4EU"
 
 
 #-------------------------------

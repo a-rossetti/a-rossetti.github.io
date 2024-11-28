@@ -140,6 +140,10 @@
 .widget-instagram, .widget-x {
   .instagram-box, .x-box {
     text-align: center;
+    padding-right: 15px;
+    max-height: 500px;
+    overflow-y: scroll;
+    position: relative;
 
     .instagram-grid, .x-grid {
       margin-bottom: 30px;
@@ -183,6 +187,21 @@
       }
     }
   }
+}
+
+/* Custom Scrollbar for WebKit Browsers (Chrome, Safari, Edge) */
+.instagram-box::-webkit-scrollbar, .x-box::-webkit-scrollbar {
+  width: 6px; /* Make the scrollbar narrower */
+}
+
+.instagram-box::-webkit-scrollbar-track, .x-box::-webkit-scrollbar-track {
+  background: transparent; /* Dark background for the track */
+}
+
+/* For Firefox, slim scrollbar */
+.instagram-box, .x-box {
+  scrollbar-width: thin; /* 'thin' for slim scrollbar */
+  scrollbar-color: $text transparent; /* Scroll thumb and track colors */
 }
 
 // Newsletter Widget
