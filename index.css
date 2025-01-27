@@ -65,9 +65,20 @@ main {
   }
 }
 
+body {
+  h2 {
+    font-size: 32px;
+  }
+
+  p, li {
+    font-size: 17px;
+  }
+}
+
 .about {
   a {
     color: inherit;
+    font-weight: bold;
     text-decoration: none;
   }
 
@@ -76,20 +87,22 @@ main {
   }
 }
 
-.project {
-  ul {
-    list-style-position: inside;
-    list-style-type: square;
-    padding-left: 10px;
-  }
+.projects {
+  .project {
+    ul {
+      list-style-position: inside;
+      list-style-type: square;
+      padding-left: 10px;
+    }
 
-  li {
-    line-height: 25px;
-  }
+    li {
+      line-height: 25px;
+    }
 
-  a {
-    color: inherit;
-    text-decoration: underline;
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 
   .cs-hr-top {
@@ -115,6 +128,10 @@ main {
 
 footer {
   text-align: center;
+  
+  p {
+    font-size: 14px;
+  }
   
   a {
     color: inherit;
