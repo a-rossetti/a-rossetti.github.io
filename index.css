@@ -1,0 +1,129 @@
+body {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+::selection {
+  background-color: #958831;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  margin-bottom: 40px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .gh {
+        background-image: url(svg/github.svg);
+      }
+
+      .x {
+        background-image: url(svg/x.svg);
+      }
+    }
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+}
+
+main {
+  & > div {
+    margin-bottom: 15px;
+    h2 {
+      user-select: none;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.about {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.project {
+  ul {
+    list-style-position: inside;
+    list-style-type: square;
+    padding-left: 10px;
+  }
+
+  li {
+    line-height: 25px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .cs-hr-top {
+    margin-top: 5px;
+  }
+
+  .cs-hr-mid {
+    margin: 5px 0;
+  }
+
+  .cs-hr-bottom {
+    margin-bottom: 5px;
+  }
+}
+
+.essay {
+  ul {
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 20px;
+  }
+}

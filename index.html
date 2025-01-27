@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
+        <link rel="stylesheet" href="index.css">
+        <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+        <meta title="Andrea Rossetti" />
+    </head>
+    <body>
+        <header>
+            <div class="top">
+                <h1>Andrea Rossetti</h1>
+
+                <div class="links">
+                    <a
+                        href="https://github.com/a-rossetti"
+                        target="_blank"
+                        class="cs-btn gh"
+                    ></a>
+                    <a
+                        href="https://x.com/a_rossetti_"
+                        target="_blank"
+                        class="cs-btn x"
+                    ></a>
+                </div>
+            </div>
+            <p>Computer Science student - University of Milan</p>
+
+            <hr class="cs-hr" />
+        </header>
+
+        <div class="cs-tabs">
+            <input
+                class="radiotab"
+                name="tabs"
+                tabindex="1"
+                type="radio"
+                id="tabone"
+                checked="checked"
+            />
+            <label class="label" for="tabone">About</label>
+
+            <div class="panel" tabindex="1">
+                <div class="about">
+                    <h2>About me</h2>
+                    <p>Hey, I'm Andrea, I'm 19 years old and I'm a CS student in Milan. You can find my work in the <b><a href="#" onclick="document.getElementById('tabtwo').click(); return false;">Projects</a></b> tab above, including full-stack applications, small open source projects, and personal configs. I'm interested the most in low-level programming, cybersecurity and machine learning. </p>
+                    <p>In the <b><a href="#" onclick="document.getElementById('tabthree').click(); return false;">Essays</a></b> tab, I write about my interests outside of computer science, including geopolitics, economics, philosophy and music.</p>
+                </div>
+            </div>
+
+            <input
+                class="radiotab"
+                tabindex="1"
+                name="tabs"
+                type="radio"
+                id="tabtwo"
+            />
+            <label class="label" for="tabtwo">Projects</label>
+            <div class="panel" tabindex="1">
+
+                <!-- <h2>Full-Stack Applications</h2>
+                <hr class="cs-hr cs-hr-bottom" />
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Project description</p>
+                    <ul>
+                        <li>Project link</li>
+                    </ul>
+                </div>
+                <hr class="cs-hr cs-hr-mid" />
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Project description</p>
+                    <ul>
+                        <li>Project link</li>
+                    </ul>
+                </div>
+                <hr class="cs-hr cs-hr-top" />
+                <hr class="cs-hr cs-hr-bottom" />
+
+                <h2>Open Source Projects</h2>
+                <hr class="cs-hr cs-hr-bottom" />
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Project description</p>
+                    <ul>
+                        <li>Project link</li>
+                    </ul>
+                </div>
+                <hr class="cs-hr cs-hr-mid" />
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Project description</p>
+                    <ul>
+                        <li>Project link</li>
+                    </ul>
+                </div>
+                <hr class="cs-hr cs-hr-top" />
+                <hr class="cs-hr cs-hr-bottom" />  -->
+
+                <h2>Personal Configs</h2>
+                <hr class="cs-hr cs-hr-bottom" />
+                <div class="project">
+                    <h3>NeoVim configuration</h3>
+                    <p>Personal nvim config based on kickstart</p>
+                    <ul>
+                        <li>GitHub: <a href="https://github.com/a-rossetti/kickstart.nvim" target="_blank">kickstart.nvim</a></li>
+                    </ul>
+                </div>
+                <hr class="cs-hr cs-hr-mid" />
+                <div class="project">
+                    <h3>Kitty terminal configuration</h3>
+                    <p>Personal kitty terminal config. Color palette based on GNOME terminal. Includes custom startup animation: a rotating, color-shifting ASCII torus</p>
+                    <ul>
+                        <li>GitHub: <a href="https://github.com/a-rossetti/kitty.conf" target="_blank">kitty.conf</a></li>
+                    </ul>
+                </div>
+            </div>
+            <input
+                class="radiotab"
+                tabindex="1"
+                name="tabs"
+                type="radio"
+                id="tabthree"
+            />
+            <label class="label" for="tabthree">Essays</label>
+            <div class="panel" tabindex="1">
+                <div class="essay">
+                    <h2>Essays</h2>
+                    <!-- <ul>
+                        <li>Essay 1</li>
+                        <li>Essay 2</li>
+                        <li>Essay 3</li>
+                    </ul> -->
+                    <p>Coming soon...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="cs-panel" style="margin-top: 30px; text-align: center;">
+            <div class="cs16-text">
+                <p>© 2025 - Andrea Rossetti</p>
+                <p>Built with <a href="https://github.com/ekmas/cs16.css" target="_blank">cs16.css</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
